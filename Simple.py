@@ -17,7 +17,7 @@ st.sidebar.image('Simple tubular img #1.png', use_column_width=True)
 st.sidebar.write('An application for this case is the coils used in passing heating systems. The coils consist of tubes or tube systems through which fluids pass and are heated by an external heat source.')
 st.sidebar.write('This case can also represent any industrial piping used to heat fluids through an external heat source.')
 st.sidebar.write('This simulator uses the following energy balance equation for the fluid that passes through the exchanger, considering the principle of energy conservation:')
-st.sidebar.image('Equacao Caso 1.jpg', use_column_width=True)
+st.sidebar.image('Simple tubular equations.jpg', use_column_width=True)
 
 def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     dx = L / n
