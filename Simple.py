@@ -9,6 +9,16 @@ from seaborn.palettes import blend_palette
 
 st.set_page_config(layout="wide")
 
+# Explaining the simulator
+st.sidebar.title('About the Simulator:')
+st.sidebar.write('This is a simulator of a simple tubular heat exchanger that heats a fluid as it passes through it. When running the simulation, you will be able to observe the temperature profile of the fluid throughout the exchanger as time passes. You will also be able to view steady-state temperatures along the length of the exchanger.')
+st.sidebar.write('Below is an image exemplifying this exchanger, created by myself.')
+st.sidebar.image('Case1.png', use_column_width=True)
+st.sidebar.write('An application for this case is the coils used in passing heating systems. The coils consist of tubes or tube systems through which fluids pass and are heated by an external heat source.')
+st.sidebar.write('This case can also represent any industrial piping used to heat fluids through an external heat source.')
+st.sidebar.write('This simulator uses the following energy balance equation for the fluid that passes through the exchanger, considering the principle of energy conservation:')
+st.sidebar.image('Equacao Caso 1.jpg', use_column_width=True)
+
 def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     dx = L / n
     x = np.linspace(dx/2, L-dx/2, n)
@@ -68,20 +78,10 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
 
 st.title('TROCAL Simulator - Simulation of a Simple Tubular Heat Exchanger')
 
-# Explaining the simulator
-st.sidebar.title('About the Simulator:')
-st.sidebar.write('This is a simulator of a simple tubular heat exchanger that heats a fluid as it passes through it. When running the simulation, you will be able to observe the temperature profile of the fluid throughout the exchanger as time passes. You will also be able to view steady-state temperatures along the length of the exchanger.')
-st.sidebar.write('Below is an image exemplifying this exchanger, created by myself.')
-st.sidebar.image('Case1.png', use_column_width=True)
-st.sidebar.write('An application for this case is the coils used in passing heating systems. The coils consist of tubes or tube systems through which fluids pass and are heated by an external heat source.')
-st.sidebar.write('This case can also represent any industrial piping used to heat fluids through an external heat source.')
-st.sidebar.write('This simulator uses the following energy balance equation for the fluid that passes through the exchanger, considering the principle of energy conservation:')
-st.sidebar.image('Equacao Caso 1.jpg', use_column_width=True)
-
 col1, col2 = st.columns(2)
 with col1:
   st.header('Parameters')
-  st.write('ATTENTION: On the main page, you will find a button that runs the simulation with a pre-defined example ("Run standard example"). This example takes around 30 seconds to run, depending on your connection speed. If you want to use your own input values, use the "Run simulation" button. It is recommended to use a number of nodes between 10 and 30, depending on the specific example used.')
+  st.write('ATTENTION: In the 'Results' section, you will find a button that runs the simulation with a pre-defined example ("Run standard example"). This example takes around 30 seconds to run, depending on your connection speed. If you want to use your own input values, use the "Run simulation" button. It is recommended to use a number of nodes between 10 and 30, depending on the specific example used.')
   # Input Values
   L = st.number_input('Length of the tub (m)', min_value=0.0)
   r = st.number_input('Radius of the tube (m)', min_value=0.0)
