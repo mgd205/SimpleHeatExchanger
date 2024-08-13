@@ -66,7 +66,7 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     plt.title('Fluid temperature along the length of the exchanger at steady-state.')
     st.pyplot(plt)
 
-st.title('TROCAL Simulator - Simulation of a simple tubular heat exchanger')
+st.title('TROCAL Simulator - Simulation of a Simple Tubular Heat Exchanger')
 
 # Explaining the simulator
 st.sidebar.title('About the Simulator:')
