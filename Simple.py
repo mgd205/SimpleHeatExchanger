@@ -97,7 +97,7 @@ with col1:
 
 with col2:
   st.header('Results')
-  if st.button('Run Simulation'):
+  if st.button('Run simulation'):
       run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt)
-  elif st.button('Run standard sample'):
+  elif st.button('Run standard example'):
       run_simulation(10, 0.1, 10, 3, 4180, 995.61, 400, 300, 10000, 210, 1)
