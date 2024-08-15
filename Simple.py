@@ -81,7 +81,7 @@ st.title('TROCAL Simulator - Simulation of a Simple Tubular Heat Exchanger')
 col1, col2 = st.columns(2)
 with col1:
   st.header('Parameters')
-  st.write('ATTENTION: In the 'Results' section, you will find a button that runs the simulation with a pre-defined example ("Run standard example"). This example takes around 30 seconds to run, depending on your connection speed. If you want to use your own input values, use the "Run simulation" button. It is recommended to use a number of nodes between 10 and 30, depending on the specific example used.')
+  st.write('ATTENTION: In the "Results" section, you will find a button that runs the simulation with a pre-defined example ("Run standard example"). This example takes around 30 seconds to run, depending on your connection speed. If you want to use your own input values, use the "Run simulation" button. It is recommended to use a number of nodes between 10 and 30, depending on the specific example used.')
   # Input Values
   L = st.number_input('Length of the tube (m)', min_value=0.0)
   r = st.number_input('Radius of the tube (m)', min_value=0.0)
