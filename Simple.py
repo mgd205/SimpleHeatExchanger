@@ -66,7 +66,7 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
     with st.expander("Visualization of the real-time Simulation of the Fluid (Click here to see)"):
         st.write('Variation in the temperature of the fluid passing through the exchanger over time and length.')
         st.write('Time represented above the GIF, in seconds. Temperatures in Kelvin on the y-axis. Length of the exchanger in meters on the x-axis of the GIF.')
-        st.image('Temperature Variation - Caso I.gif')
+        st.image('Temperature Variation - Case I.gif')
 
     # Displaying the graph of temperature variation along length in steady-state
     plt.figure(fig_permanente)
