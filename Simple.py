@@ -50,7 +50,7 @@ def run_simulation(L, r, n, m, Cp, rho, Ti, T0, q_fluxo, t_final, dt):
         plt.clf()
         line = pd.DataFrame(df_Temp.iloc[t, :]).T
         sns.heatmap(line, cmap=paleta_calor)
-        plt.title(f'Tempo: {t} (s)')
+        plt.title(f'Time: {t} (s)')
         plt.gca().set_xticklabels(['{:.2f}'.format(val) for val in x])
 
     # Creating figure for the animation
